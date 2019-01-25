@@ -1,0 +1,33 @@
+Week 01
+
+Shell:
+control -c or control -d to halt execution
+
+Variables:
+can only contain letters, digits, (_), and (*)
+
+Math Functions:
+An even number %2 is always 0; An odd number %2 is always 1.
+/ integer division
+// floating point division
+
+round() - rounds a number
+
+Strings:
+
+Objects:
+
+Selections:
+
+Overflow: When a variable is assigned a value too large to be stored
+
+Underflow: When a variable is assigned a value too small to be stored
+
+Development process:
+1) Requirements
+2) System Analysis
+3) Sys Design
+4) Implement
+5) Testing
+6) Deployment
+7) Maintenance
