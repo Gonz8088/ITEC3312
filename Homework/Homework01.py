@@ -1,20 +1,20 @@
 # PROGRAMMER: Paul Gonzales
-# DATE:   month day, 2019
-# ASSIGNMENT:  Homework 01
+# DATE:   February 7, 2019
+# ASSIGNMENT:  Homework 01 (Financial application: loan amortization schedule)
 # ALGORITHM: How the program works.  This should be structured using short,
 # descriptive phrases that are indented appropriately.
 
 
 # TODO: LOOK UP SOLUTION per in class discussion; answer is in book
 
-(Financial application: loan amortization schedule)
-The monthly payment for a given loan pays the principal and the interest.
-The monthly interest is computed by multiplying the monthly interest rate and the balance (the remaining principal).
-The principal paid for the month is therefore the monthly payment minus the monthly interest.
 
-Note
-The balance after the last payment may not be zero. If so, the last payment
-should be the normal monthly payment plus the final balance.
+# The monthly payment for a given loan pays the principal and the interest.
+# The monthly interest is computed by multiplying the monthly interest rate and the balance (the remaining principal).
+# The principal paid for the month is therefore the monthly payment minus the monthly interest.
+
+# Note
+# The balance after the last payment may not be zero. If so, the last payment
+# should be the normal monthly payment plus the final balance.
 
 
 # Start
