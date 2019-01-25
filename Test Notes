@@ -10,8 +10,11 @@ Math Functions:
 An even number %2 is always 0; An odd number %2 is always 1.
 / integer division
 // floating point division
-
-round() - rounds a number
+round(i): rounds a number
+max(a, b, c): returns max number
+min(a, b, c): returns min number
+abs(-a): returns absolute value
+pow(a, x): returns a to power of x
 
 Strings:
 
