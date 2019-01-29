@@ -6,16 +6,20 @@
 # the interest portion, and principal portion of the payment, decreasing the remaining balance, and printing to standard out
 # these data.
 
+
+def calc_month_rate(apr):
+    return (apr/100)/12
+
+def calc_month_payment(p, j, n):
+    return p(j/(1-(1+j)**(-n))
+
 # Start
-balance = int(input("Enter Loan Ammount: ")) # The balance is initially the loan amount.
+balance = int(input("Enter Loan Ammount: "))
 numberOfYears = int(input("Enter Loan Term: "))
 rate = int(input("Enter Interest Rate: "))
 
-
-# TODO: display amortization schedule for the loan
-
-# Since the monthly payment is the same for each month, it should be computed before the loop.
-monthlyPayment = principal + interest
+monthlyInterestRate = calc_month_rate(rate)
+monthlyPayment = calc_month_payment(balance, monthlyInterestRate, numberOfYears)
 
 # For each iteration in the loop, compute the interest and principal and update the balance.
 for i in range(1, numberOfYears * 12 + 1):
