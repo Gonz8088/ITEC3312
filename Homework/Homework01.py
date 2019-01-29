@@ -7,9 +7,9 @@
 # these data.
 
 # Start
-balance = input("Enter Loan Ammount: ") # The balance is initially the loan amount.
-numberOfYears = input("Enter Loan Term: ")
-monthlyInterestRate = input("Enter Interest Rate: ")
+balance = int(input("Enter Loan Ammount: ")) # The balance is initially the loan amount.
+numberOfYears = int(input("Enter Loan Term: "))
+rate = int(input("Enter Interest Rate: "))
 
 
 # TODO: display amortization schedule for the loan
