@@ -16,10 +16,28 @@ def calc_month_payment(p, j, n):
     return p*(j/(1-(1+j)**(-n)))
 
 # Start
-balance = int(input("Enter Loan Ammount: "))
-numberOfYears = int(input("Enter Loan Term: "))
+while True:
+    try:
+        balance = int(input("Enter Loan Ammount: "))
+        break
+    except ValueError:
+        print("Invalid Loan Input...")
+
+while True:
+    try:
+        numberOfYears = int(input("Enter Loan Term: "))
+        break
+    except ValueError:
+        print("Invalid Loan Term...")
+
 numberOfMonths = numberOfYears * 12
-rate = int(input("Enter Interest Rate: "))
+
+while True:
+    try:
+        rate = int(input("Enter Interest Rate: "))
+        break
+    except ValueError:
+        print("Invalid Rate Input...")
 
 monthlyInterestRate = calc_month_rate(rate)
 monthlyPayment = calc_month_payment(balance, monthlyInterestRate, numberOfMonths)
