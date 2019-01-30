@@ -13,15 +13,16 @@ def calc_month_rate(apr):
     return (apr/100)/12
 
 def calc_month_payment(p, j, n):
-    return p(j/(1-(1+j)**(-n))
+    return p*(j/(1-(1+j)**(-n)))
 
 # Start
 balance = int(input("Enter Loan Ammount: "))
 numberOfYears = int(input("Enter Loan Term: "))
+numberOfMonths = numberOfYears * 12
 rate = int(input("Enter Interest Rate: "))
 
 monthlyInterestRate = calc_month_rate(rate)
-monthlyPayment = calc_month_payment(balance, monthlyInterestRate, numberOfYears)
+monthlyPayment = calc_month_payment(balance, monthlyInterestRate, numberOfMonths)
 
 # For each iteration in the loop, compute the interest and principal and update the balance.
 for i in range(1, numberOfYears * 12 + 1):
@@ -32,4 +33,4 @@ for i in range(1, numberOfYears * 12 + 1):
 
     balance = balance - principal
 
-    print(i, "\t\t", interest, "\t\t", principal, "\t\t", balance)
+    print("Month: ", i, "\t", "Interest: ", round(interest, 2), "\t", "Principal: ", round(principal, 2), "\t", "Remaining Balance: ", round(balance, 2))
