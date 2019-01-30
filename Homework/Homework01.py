@@ -1,10 +1,12 @@
 # PROGRAMMER: Paul Gonzales
 # DATE: February 7, 2019
 # ASSIGNMENT: Homework 01 (Financial application: loan amortization schedule)
-# ALGORITHM: 1) prompt user to input Principal, Rate, Term; 2) convert annual interest into monthly interest, and convert term
-# from years to months; 3) caclulate monthly payment using data provided; 4) loop through each monthly payment cycle calculating
-# the interest portion, and principal portion of the payment, decreasing the remaining balance, and printing to standard out
-# these data.
+# ALGORITHM: 1) prompt user to input Principal, Rate, Term;
+# 2) convert annual interest into monthly interest, and convert term from years to months;
+# 3) caclulate monthly payment using data provided;
+# 4) loop through each monthly payment cycle calculating the interest portion, and
+# principal portion of the payment, decreasing the remaining balance, and printing
+# to standard out these data.
 
 
 def calc_month_rate(apr):
