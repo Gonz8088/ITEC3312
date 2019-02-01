@@ -43,3 +43,28 @@ Development process:
 5) Testing
 6) Deployment
 7) Maintenance
+
+
+Week 02
+
+Logical Operators:
+- not
+- and
+- or
+
+Conditional Expressions:                      #REVIEW THIS ONE
+ex.1 - ticketPrice = 20 if ages >=16 else 10
+
+ex.2 - print(count, end='\n' if count % 10 == else count, end=" ")
+
+Operator Precedence:
++, -
+**
+not
+*, /, //, %
++, -
+<, <=, >, >=
+==, !=
+and
+or
+=, +=, -=, *=, /=, //=, %=
