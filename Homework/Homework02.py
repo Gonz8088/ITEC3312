@@ -1,6 +1,6 @@
 # PROGRAMMER: Paul Gonzales
-# DATE:   February 7, 2019
-# ASSIGNMENT:  Homework #00
+# DATE:   February 14, 2019
+# ASSIGNMENT:  Homework 02
 # ALGORITHM: How the program works.  This should be structured using short, descriptive phrases that are indented appropriately.
 
 # Craps is a popular dice game played in casinos. Write a program to play a variation of the game, as follows:
@@ -16,20 +16,34 @@
 
 import random
 
-def check_win():
-    # TODO:
-    return
-def check_lose():
-    # TODO:
+def check_win(d1, d2):
+    if d1 + d2 == 7 or d1 + d2 == 11:
+        print("You win.")
+        return 1
+    else:
+        return 0
+
+def check_lose(d1, d2):
+    if d1 + d2 == 2 or d1 + d2 == 3 or d1 + d2 == 12:
+        print("You lost.")
+        return 1
+    else:
+        return 0
+
+def main():
+    point = 0
+    
+    while True or point != 7:
+        die_1 = random.randrange(1, 7)
+        die_2 = random.randrange(1, 7)
+        print("You rolled a", die_1, ", and a", die_2)
+        if check_win(die_1, die_2) == True:
+            break
+        elif check_lose(die_1, die_2) == True:
+            break
+        else:
+            point +=1
     return
 
-die_1 = random(1, 6)
-die_2 = random(1, 6)
-point = 0
-
-if die_1 + die_2 == 2 or die_1 + die_2 == 3 or die_1 + die_2 == 12:
-    print("You lost.")
-elif die_1 + die_2 == 7 or die_1 + die_2 == 11:
-    print("You win.")
-else:
-    point +=1
+if __name__ == "__main__":
+    main()
