@@ -68,3 +68,34 @@ not
 and
 or
 =, +=, -=, *=, /=, //=, %=
+
+
+Week 03
+
+When mixing positional arguments and keyword arguments, all positional arugments in a call must come first,
+Then the kwargs.
+
+Scope: the part of the program where the variable can be referenced.
+
+A variable created inside a function is referred to as a local variable. 
+Local variables can only be accessed inside a function. 
+The scope of a local variable starts from its creation and continues to the end of the function that contains the variable. 
+
+In Python, you can also use global variables. 
+They are created outside all functions and are accessible to all functions in their scope. 
+
+Example of Formal Parameters ---> def my_func(w=1, h=2):  # if no value is passed for w or h, 
+then they will have value of 1 and 2.
+
+Example of binding a global variable inside a function:
+x = 1    # is a global
+def my_func():
+    global x
+    x = x+1   # the x in here is the same as the global x
+    
+Example of returning more than one value:
+
+def my_func():
+    return 1, 2, 3
+    
+x, y, z = my_func()
