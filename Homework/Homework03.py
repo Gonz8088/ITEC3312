@@ -24,12 +24,12 @@ def getNumber(uppercaseLetter):
 def main():
     phone_number = input("Enter a string:").replace('-', '')
     if phone_number.isnumeric():
-        print(phone_number)    # needs to be in xxx-xxx-xxxx format
+        print(format(int(phone_number[:-1]), ',').replace(',', '-') + phone_number[-1])
     else:
         for char in phone_number:
             if char.isalpha():
                 phone_number = phone_number.replace(char, str(getNumber(char)))
-        print(phone_number)    # needs to be in xxx-xxx-xxxx format
+        print(format(int(phone_number[:-1]), ',').replace(',', '-') + phone_number[-1])
 
     return None
 
