@@ -4,11 +4,12 @@
 # ALGORITHM: How the program works.  This should be structured using short, descriptive phrases that are indented appropriately.
 
 from datetime import datetime as dt
+from datetime import timedelta as td
 
 class StopWatch:
     """docstring for StopWatch."""
     def __init__(self):
-        self.__startTime = dt.time().now()
+        self.__startTime = dt.now().time()
         self.__endTime = None
 
     def get_startTime(self):
@@ -18,14 +19,18 @@ class StopWatch:
         return self.__endTime
 
     def get_ElapsedTime(self):
-        return self.__endTime - self.__startTime
+        __c = td(hours=__startTime.hour, minutes=__startTime.minute, \
+        seconds=__startTime.second, milliseconds=__startTime.millisecond)
+        __d = td(hours=__endTime.hour, minutes=__endTime.minute, \
+        seconds=__endTime.second, milliseconds=__endTime.millisecond)
+        return str(d-c)
 
     def start(self):
-        self.__startTime = dt.time().now()
+        self.__startTime = dt.now().time()
         return
 
     def stop(self):
-        self.__endTime = dt.time().now()
+        self.__endTime = dt.now().time()
         return
 
 
