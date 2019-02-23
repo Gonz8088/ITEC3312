@@ -1,7 +1,15 @@
 # PROGRAMMER: Paul Gonzales
 # DATE: month day, 2019
 # ASSIGNMENT: Homework 04
-# ALGORITHM: How the program works.  This should be structured using short, descriptive phrases that are indented appropriately.
+# ALGORITHM: The StopWatch class is built according to the specification,
+# and uses a datetime object, and timedelta object from the datetime moduleself.
+# when a StopWatch object is created, the __startTime attribute is initialized
+# using the now().time() method. The for loop adds the sum of integers from 1 to
+# 1000000, and then the stopwatch.stop() method is called to get the current time
+# at the end of the loop. The elapsed time is then determined by creating timedelta
+# objects. One for the __startTime, and one for the __endTime. The __startTime
+# timedelta object is subtracted from the __endTime timedelta object, and the
+# result is returned as a string.
 
 from datetime import datetime as dt
 from datetime import timedelta as td
@@ -19,11 +27,11 @@ class StopWatch:
         return self.__endTime
 
     def get_ElapsedTime(self):
-        __c = td(hours=__startTime.hour, minutes=__startTime.minute, \
-        seconds=__startTime.second, milliseconds=__startTime.millisecond)
-        __d = td(hours=__endTime.hour, minutes=__endTime.minute, \
-        seconds=__endTime.second, milliseconds=__endTime.millisecond)
-        return str(d-c)
+        self.__c = td(hours=self.__startTime.hour, minutes=self.__startTime.minute, \
+        seconds=self.__startTime.second, milliseconds=self.__startTime.microsecond)
+        self.__d = td(hours=self.__endTime.hour, minutes=self.__endTime.minute, \
+        seconds=self.__endTime.second, milliseconds=self.__endTime.microsecond)
+        return str(self.__d-self.__c)
 
     def start(self):
         self.__startTime = dt.now().time()
@@ -36,9 +44,13 @@ class StopWatch:
 
 def main():
     stopwatch = StopWatch()
-    for i in range(1000000):
+
+    for i in range(1000001):
         i += i
-    stopwatch.get_ElapsedTime()
+
+    stopwatch.stop()
+    print("Sum:", i)
+    print("Elapsed Time:", stopwatch.get_ElapsedTime())
 
     return
 
