@@ -13,6 +13,11 @@ def calc_month_rate(apr):
     return (apr/100)/12
 
 def calc_month_payment(p, j, n):
+    """
+    p = principal;
+    j = periodic interest rate
+    n = total number of payments
+    """
     return p*(j/(1-(1+j)**(-n)))
 
 # 1)
