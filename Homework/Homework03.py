@@ -21,7 +21,7 @@ def getNumber(uppercaseLetter):
     9: 'WXYZwxyz'
     }
 
-    for kv_pair in iter(keypad.items()):
+    for kv_pair in keypad.items():
         if uppercaseLetter in kv_pair[1]:
             return kv_pair[0]
         else:
