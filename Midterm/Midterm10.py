@@ -1,65 +1,91 @@
 # PROGRAMMER: Paul Gonzales
-# DATE: month day, 2019
-# ASSIGNMENT: Midterm #00
+# DATE: March 6, 2019
+# ASSIGNMENT: Midterm 10
 # ALGORITHM: How the program works.  This should be structured using short, descriptive phrases that are indented appropriately.
 
 import random
 
 class bot:
+    name = "bot"
     # attributes
-    self.__turn
+    def __init__(self):
+        self.__turn = 0
 
     # methods
-    def getTurn():
+    def setTurn(self):
+        self.__turn = random.randint(1, 3)
+
+    def getTurn(self):
         return self.__turn
 
 class human:
     # attributes
-    self.__name
-    self.__turn
-    self.__choice
+    def __init__(self):
+        self.__name = ""
+        self.__turn = 0
 
     # methods
-    def setName():
-        name = input("Enter Name: ")
-        self.__name = name
+    def setName(self, player: str):
+        self.__name = player
 
-    def getName():
+    def getName(self) -> str:
         return self.__name
 
-    def setTurn():
-        turn = input("Enter Choice: ")
-        self.__turn = turn
+    def setTurn(self, choice: int):
+        self.__turn = choice
 
-    def getTurn():
+    def getTurn(self) -> int:
         return self.__turn
-
-    def wantToPlayaGame():
-        choice = input("Do you want to play a game?")
-        self.__choice = choice
-        return choice
 
 class game:
     outcomes = ("rock", "paper", "scissors")
+    title = f"""\tROCK PAPER SCISSORS \n===================================\n"""
+    controls = f"Moves: 1) {outcomes[0]}, 2) {outcomes[1]}, or 3) {outcomes[2]}"
+
     # attributes
-    self.__gameActive
-    self.__humanPlayer = human()
-    self.__botPlayer = bot()
+    def __init__(self):
+        self.__humanPlayer = human()
+        self.__botPlayer = bot()
 
     # methods
-    def playGame():
-        self.__humanPlayer.setName()
-        self.__humanPlayer.setTurn()
+    def whatMove(self, choice: int) -> str:
+        if choice == 1:
+            return "rock"
+        elif choice == 2:
+            return "paper"
+        elif choice == 3:
+            return "scissors"
+        else:
+            return "something went wrong"
 
-    def get_gameActivity():
-        return self.__gameActive
+    def checkWinner(self, human: int, bot: int) -> str:
+        winner = [['draw', 'bot', 'human'], ['human', 'draw', 'bot'], ['bot', 'human', 'draw']]
+        return winner[human-1][bot-1]
 
-    def set_gameActivity():
+    def playGame(self):
+        print(self.title)
+        print(self.controls)
+        playername = input("Please Enter Name: ")
+        self.__humanPlayer.setName(playername)
+        print("Hello " + self.__humanPlayer.getName())
+        self.__botPlayer.setTurn()
+        turn = int(input("Enter Choice: "))
+        self.__humanPlayer.setTurn(turn)
+        print(self.__humanPlayer.getName() + " played: " + self.whatMove(self.__humanPlayer.getTurn()))
+        print("Bot played: " + self.whatMove(self.__botPlayer.getTurn()))
+        print("The winner is: " + self.checkWinner(self.__humanPlayer.getTurn(), self.__botPlayer.getTurn()))
 
 def main():
-    mygame = game()
-    mygame.playGame()
-    return None
+    choice = ""
+    while True:
+        mygame = game()
+        mygame.playGame()
+        print("Would you like to play again?")
+        playagain = input("Any key to continue... (Q) to quit")
+        if playagain == "Q" or playagain == "q":
+            break
+
+    return
 
 if __name__ == "__main__":
     main()
