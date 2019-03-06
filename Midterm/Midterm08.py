@@ -40,7 +40,7 @@ def main():
     elif (color1 == primaries[1] or color2 == primaries[1]) and (color1 == primaries[2] or color2 == primaries[2]):
         print("The secondary color is green.")
 
-    return None
+    return
 
 if __name__ == "__main__":
     main()

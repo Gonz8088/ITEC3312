@@ -15,7 +15,7 @@ class bot:
     def setTurn(self):
         self.__turn = random.randint(1, 3)
 
-    def getTurn(self):
+    def getTurn(self) -> int:
         return self.__turn
 
 class human:
@@ -50,11 +50,11 @@ class game:
     # methods
     def whatMove(self, choice: int) -> str:
         if choice == 1:
-            return "rock"
+            return self.outcomes[0]
         elif choice == 2:
-            return "paper"
+            return self.outcomes[1]
         elif choice == 3:
-            return "scissors"
+            return self.outcomes[2]
         else:
             return "something went wrong"
 
@@ -76,7 +76,6 @@ class game:
         print("The winner is: " + self.checkWinner(self.__humanPlayer.getTurn(), self.__botPlayer.getTurn()))
 
 def main():
-    choice = ""
     while True:
         mygame = game()
         mygame.playGame()

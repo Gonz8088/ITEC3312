@@ -15,7 +15,7 @@ def main():
 
     print("Your total pay is: $" + str(salary/100))
 
-    return None
+    return
 
 if __name__ == "__main__":
     main()

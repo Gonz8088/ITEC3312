@@ -35,7 +35,7 @@ def main():
     print(f"The highest score is: {highest[0]}: {highest[1]}")
     print(f"The 2nd highest score is: {highest_2nd[0]}: {highest_2nd[1]}")
 
-    return None
+    return
 
 if __name__ == "__main__":
     main()

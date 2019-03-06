@@ -10,8 +10,8 @@ def main():
     for year in range(2019, 2040):
         sea_level += rate
         print("Year:" + str(year))
-        print("Amount Risen:" + str(sea_level))
-    return None
+        print("Amount Risen: " + str(format(sea_level, '.2f')) + "mm", end='\n\n')
+    return
 
 if __name__ == "__main__":
     main()

@@ -8,6 +8,7 @@ def main():
     # loop 1
     while x < 11:
         print(1/x)
+        x +=1
 
     # loop 2
     for x in range(2, 11):

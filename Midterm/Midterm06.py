@@ -44,13 +44,13 @@ def main():
     projectcost = project_cost(paintcost, laborcost)
 
     print("\n --- Work/Cost Estimate --- \n \n")
-    print("Length of Job: " + str(workhrs) + "hrs")
-    print("Cost of Labor: $" + str(laborcost/100))
-    print("Gallons of Paint: " + str(gallons))
-    print("Cost of Paint: $" + str(paintcost/100))
-    print("Project Total: $" + str(projectcost/100))
+    print("Length of Job: " + str(format(workhrs, '.2f')) + "hrs")
+    print("Cost of Labor: $" + str(format(laborcost/100, '.2f')))
+    print("Gallons of Paint: " + str(format(gallons, '.2f')))
+    print("Cost of Paint: $" + str(format(paintcost/100, '.2f')))
+    print("Project Total: $" + str(format(projectcost/100, '.2f')))
 
-    return None
+    return
 
 if __name__ == "__main__":
     main()
