@@ -1,7 +1,17 @@
 # PROGRAMMER: Paul Gonzales
-# DATE: month day, 2019
-# ASSIGNMENT: Midterm #00
-# ALGORITHM: How the program works.  This should be structured using short, descriptive phrases that are indented appropriately.
+# DATE: March 6, 2019
+# ASSIGNMENT: Midterm 9
+# ALGORITHM: The user is prompted to enter the number of students using try ..except
+# block. If the user doesn't input an integer number, an exception is raised.
+# The loop iterates for the number of students stored in num_students. A try ..except
+# block is also used to check for an integer value. Each iteration of the loop
+# adds a dictionary item to scores using the student name as a key, and score as
+# the value. A second loop the checks each item in scores, and compares the values
+# It checks if the current score is higher than highest_2nd, if it is is stores
+# the item, otherwise it discards it. It then checks if the value stored in
+# highest_2nd is greater than highest. If it is, it stores it and highest, and
+# sets highest_2nd to is previous item, otherwise it nothing is stored in highest.
+# The highest and 2nd highest scores are displayed.
 
 def main():
     while True:

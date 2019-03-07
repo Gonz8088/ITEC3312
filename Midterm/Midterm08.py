@@ -1,7 +1,11 @@
 # PROGRAMMER: Paul Gonzales
-# DATE: month day, 2019
+# DATE: March 6, 2019
 # ASSIGNMENT: Midterm 08
-# ALGORITHM: How the program works.  This should be structured using short, descriptive phrases that are indented appropriately.
+# ALGORITHM: The user is prompted to pick one of the primary colors. If the color
+# is a primary, then the user is asked to pick one of the other two primary colors
+# If the user doesn't pick a primary color the first time, or picks the same color1
+# they will be prompted to pick again. The if ..elif structure then determines
+# the combination of the two colors, and outputs the corresponding secondary color
 
 def main():
     primaries = ("red", "blue", "yellow")

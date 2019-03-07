@@ -1,6 +1,6 @@
 # PROGRAMMER: Paul Gonzales
-# DATE: month day, 2019
-# ASSIGNMENT: Midterm #00
+# DATE: March 6, 2019
+# ASSIGNMENT: Midterm 4
 # ALGORITHM: How the program works.  This should be structured using short, descriptive phrases that are indented appropriately.
 
 def dog_packs(dogs):

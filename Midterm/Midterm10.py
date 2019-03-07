@@ -1,7 +1,14 @@
 # PROGRAMMER: Paul Gonzales
 # DATE: March 6, 2019
 # ASSIGNMENT: Midterm 10
-# ALGORITHM: How the program works.  This should be structured using short, descriptive phrases that are indented appropriately.
+# ALGORITHM: Three classes are used: one for the bot, one for the player, and
+# one for the game that is being played. When a game object is created, it creates
+# a bot, and human object for the current game. The bot and human objects have
+# getter and setter functions for the turn values, and the name of the human.
+# The game displays game info for each game, and then gets the user name, and turn
+# The game then checks the human turn, and bot turn and compares them to possible
+# events in the game stored in winner line 68. The winner is returned in the
+# checkWinner function.
 
 import random
 

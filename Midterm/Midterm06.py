@@ -1,7 +1,10 @@
 # PROGRAMMER: Paul Gonzales
-# DATE: month day, 2019
+# DATE: March 6, 2019
 # ASSIGNMENT: Homework 06
-# ALGORITHM: How the program works.  This should be structured using short, descriptive phrases that are indented appropriately.
+# ALGORITHM: The user is prompted to enter the number of square feet of wall.
+# The user is then prompted to enter the cost of a gallon of paint. The estimated
+# hours of work, paint needed, cost of paint, cost of labor, and project
+# are calculated with their respective functions.
 
 def labor_hrs(sqft):
     """Current estimate of time needed is:

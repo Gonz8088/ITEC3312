@@ -1,7 +1,10 @@
 # PROGRAMMER: Paul Gonzales
-# DATE: month day, 2019
+# DATE: March 6, 2019
 # ASSIGNMENT: Midterm 01
-# ALGORITHM: How the program works.  This should be structured using short, descriptive phrases that are indented appropriately.
+# ALGORITHM: The while loop uses the x as a counter starting at 2. It prints
+# 1/x each iteration and increments by 1self.
+# The for loop uses an iterator starting from 2 and ending before 11. It prints
+# 1/x each iteration.
 
 def main():
     x = 2
@@ -14,7 +17,7 @@ def main():
     for x in range(2, 11):
         print(1/x)
 
-    return None
+    return
 
 if __name__ == "__main__":
     main()
