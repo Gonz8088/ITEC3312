@@ -33,6 +33,9 @@ class Stock():
 
 
 def main():
+    mystock = Stock("Intel Corporation", "INTC", 20.5, 20.35)
+    print("The Price Change: " + str(round(mystock.getChangePercent(), 1)) + '%')
+
     return
 
 if __name__ == "__main__":
