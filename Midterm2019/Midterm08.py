@@ -25,8 +25,12 @@ class Stock():
     def getChangePercent(self) -> float:
         return # percent change
 
-    def
+    def setPreviousPrice(self, price: float):
+        self.__previousClosingPrice = price
 
+    def setCurrentPrice(self, price: float):
+        self.__currentPrice = price
+        
 
 def main():
     return
