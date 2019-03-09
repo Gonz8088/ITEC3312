@@ -10,6 +10,21 @@ class Stock():
         self.__previousClosingPrice = 0.0
         self.__currentPrice = 0.0
 
+    def getStockName(self) -> str:
+        return self.__name
+
+    def getStockSymbol(self) -> str:
+        return self.__symbol
+
+    def getPreviousPrice(self) -> float:
+        return self.__previousClosingPrice
+
+    def getCurrentPrice(self) -> float:
+        return self.__currentPrice
+
+    def getChangePercent(self) -> float:
+        return # percent change
+
 
 def main():
     return
