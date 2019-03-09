@@ -4,11 +4,11 @@
 # ALGORITHM: How the program works.  This should be structured using short, descriptive phrases that are indented appropriately.
 
 class Stock():
-    def __init__(self):
-        self.__symbol = ""
-        self.__name = ""
-        self.__previousClosingPrice = 0.0
-        self.__currentPrice = 0.0
+    def __init__(self, name, symbol, prev_price, cur_price):
+        self.__name = name
+        self.__symbol = symbol
+        self.__previousClosingPrice = prev_price
+        self.__currentPrice = cur_price
 
     def getStockName(self) -> str:
         return self.__name
@@ -24,6 +24,8 @@ class Stock():
 
     def getChangePercent(self) -> float:
         return # percent change
+
+    def
 
 
 def main():
