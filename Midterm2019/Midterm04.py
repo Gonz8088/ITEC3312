@@ -1,7 +1,8 @@
 # PROGRAMMER: Paul Gonzales
 # DATE: month day, 2019
 # ASSIGNMENT: Midterm #00
-# ALGORITHM: How the program works.  This should be structured using short, descriptive phrases that are indented appropriately.
+# ALGORITHM: The numberOfDaysInAYear function works by checking if the year passed
+# is a multiple of 4. If so then it is a leap year and it is 366 days long.
 
 def numberOfDaysInAYear(year):
     nonleap_year = 365
@@ -9,7 +10,6 @@ def numberOfDaysInAYear(year):
         print(str(year) + ': Days: ' + str(nonleap_year + 1))
     else:
         print(str(year) + ': Days: ' + str(nonleap_year))
-
     return
 
 def main():

@@ -1,7 +1,8 @@
 # PROGRAMMER: Paul Gonzales
 # DATE: month day, 2019
 # ASSIGNMENT: Midterm #00
-# ALGORITHM: How the program works.  This should be structured using short, descriptive phrases that are indented appropriately.
+# ALGORITHM: Three instances of Employee are created with values passed to them.
+# The accessor methods are called returning the string values for each attribute.
 
 class Employee:
     # attributes
@@ -12,27 +13,43 @@ class Employee:
         self.__jobtitle = title
     # methods
     def setName(self, name: str):
+        """setName--
+        sets the name of employee object give name argument"""
         self.__name = name
 
     def getName(self) -> str:
+        """getName--
+        returns the name of employee object"""
         return self.__name
 
     def setID(self, id: int):
+        """setID--
+        sets the ID of employee object give id argument"""
         self.__ID = id
 
     def getID(self) -> int:
+        """getID--
+        returns the ID of employee object"""
         return self.__ID
 
     def setDept(self, dept: str):
+        """setDept--
+        sets the department of employee object give dept argument"""
         self.__department = dept
 
     def getDept(self) -> str:
+        """getDept--
+        returns the department of employee object"""
         return self.__department
 
     def setTitle(self, title: str):
+        """setTitle--
+        sets the title of employee object give title argument"""
         self.__jobtitle = title
 
     def getTitle(self) -> str:
+        """getTitle--
+        returns the title of employee object"""
         return self.__jobtitle
 
 def main():

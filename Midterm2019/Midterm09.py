@@ -1,7 +1,10 @@
 # PROGRAMMER: Paul Gonzales
 # DATE: month day, 2019
 # ASSIGNMENT: Midterm 09
-# ALGORITHM: How the program works.  This should be structured using short, descriptive phrases that are indented appropriately.
+# ALGORITHM: A password is passed to checkPassword, it then checks each condition
+# of the password requirements, and saves the boolean value in length, alphanumeric
+# and atleasttwo. A for loop checks the password string, and
+# counts the number of instances of the string representation of i.
 
 def checkPassword(password: str) -> bool:
     length = len(password) >= 8

@@ -4,6 +4,7 @@
 # ALGORITHM: How the program works.  This should be structured using short, descriptive phrases that are indented appropriately.
 
 def oldMacDonald(pet: str) -> str:
+    """oldMacDonald-- returns the sound of the given pet argument"""
     if pet == "cow":
         return "moo"
     elif pet == "pig":

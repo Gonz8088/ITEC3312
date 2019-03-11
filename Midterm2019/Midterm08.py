@@ -1,7 +1,9 @@
 # PROGRAMMER: Paul Gonzales
 # DATE: month day, 2019
 # ASSIGNMENT: Midterm 08
-# ALGORITHM: How the program works.  This should be structured using short, descriptive phrases that are indented appropriately.
+# ALGORITHM: An instance of the Stock class is created, with name, symbol
+# previous price, and current price passed to it. The getChangePercent method is
+# invoked and returns the quotient of current price over previous price.
 
 class Stock():
     def __init__(self, name: str, symbol: str, prev_price: float, cur_price: float):

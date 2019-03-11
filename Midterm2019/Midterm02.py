@@ -6,6 +6,7 @@
 from math import pi
 
 def areaCircle(radius: int) -> float:
+    """areaCircle-- returns the area of circle given the radius argument"""
     return pi * pow(radius, 2)
 
 def main():
