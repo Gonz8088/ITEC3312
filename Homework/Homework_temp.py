@@ -4,7 +4,7 @@
 # ALGORITHM: How the program works.  This should be structured using short, descriptive phrases that are indented appropriately.
 
 class ClassName:
-    globalattribute = ""
+    classAttribute = ""
     def __init__(self, attribute, attribute2):
         self.__privateAttribute = attribute
         self.publicAttribute = attribute2
@@ -14,7 +14,7 @@ class ClassName:
 
     def mutatorMethod():
         self.__privateAttribute = ""
-        
+
 def main():
     return None
 
