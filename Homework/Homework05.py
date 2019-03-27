@@ -47,7 +47,9 @@ class ClassName:
         self.__privateAttribute = ""
 
 def main():
-    return None
+    with open("TXBabyNames.txt", 'r') as names:
+        txnames = names.readlines()
+    return
 
 if __name__ == "__main__":
     main()
