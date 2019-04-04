@@ -19,9 +19,9 @@
 
 #5.  What are the total number of babies born in Texas in 2012?
 
-6.  What are the total number of babies born in Texas with your name since 1910? #If you have an uncommon name, look for the first name of our new UHCL president - Ira.
+#6.  What are the total number of babies born in Texas with your name since 1910? #If you have an uncommon name, look for the first name of our new UHCL president - Ira.
 
-7.  What are the total number of babies born in Texas with your name between 1910 and 1960? #If you have an uncommon name, look for the first name of our new UHCL president - Ira.
+#7.  What are the total number of babies born in Texas with your name between 1910 and 1960? #If you have an uncommon name, look for the first name of our new UHCL president - Ira.
 
 8.  What name was the most popular (had the highest count in one year): List the count for boys and then for girls.
 
@@ -77,6 +77,18 @@ def main():
         record = txnames[i].strip().rpartition(',')
         if "2012" in record[0]:
             babys2012 += int(record[2])
+
+    paul1910 = 0
+    for i in range(len(txnames)):
+        record = txnames[i].strip().rpartition(',')
+        if int(record[5:9]) >= 1910 and record[0][10:14] == "Paul":
+            paul1910 += int(record[2])
+
+    paul10thru60 = 0
+    for i in range(len(txnames)):
+        record = txnames[i].strip().rpartition(',')
+        if int(record[0][5:9]) >= 1910 and int(record[0][5:9]) <= 1960 and record[0][10:14] == "Paul":
+            paul10thru60 += int(record[2])
 
     return
 
