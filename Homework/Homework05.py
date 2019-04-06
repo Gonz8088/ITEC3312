@@ -23,7 +23,7 @@
 
 #7.  What are the total number of babies born in Texas with your name between 1910 and 1960? #If you have an uncommon name, look for the first name of our new UHCL president - Ira.
 
-8.  What name was the most popular (had the highest count in one year): List the count for boys and then for girls.
+#8.  What name was the most popular (had the highest count in one year): List the count for boys and then for girls.
 
 9.  What name was that? List the name that was the most popular for boys  and then for girls.
 
@@ -101,6 +101,12 @@ def main():
         record = name.strip().rpartition(',')
         if record[0][3] == 'F' and int(record[2]) > int(highestgirl[2]):
             highestgirl = record
+                            
+    highestpaul = ("", ',', 0)
+    for name in txnames:
+        record = name.strip().rpartition(',')
+        if record[0][10:14] == "Paul" and int(record[2]) > int(highestpaul[2]):
+            highestpaul = record
 
     return
 
