@@ -90,11 +90,11 @@ def main():
         if int(record[0][5:9]) >= 1910 and int(record[0][5:9]) <= 1960 and record[0][10:14] == "Paul":
             paul10thru60 += int(record[2])
 
-    highestboy = ("", 0)
-    for i in range(len(txnames)):
-        record = txnames[i].strip().rpartition(',')
-        if int(record[2]) > highestboy[1]:
-            highestboy = # finish here
+    highestboy = ("", ',', 0)
+    for name in txnames:
+        record = name.strip().rpartition(',')
+        if record[0][3] == 'M' and int(record[2]) > int(highestboy[2]):
+            highestboy = record
 
     return
 
