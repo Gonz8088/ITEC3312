@@ -95,6 +95,12 @@ def main():
         record = name.strip().rpartition(',')
         if record[0][3] == 'M' and int(record[2]) > int(highestboy[2]):
             highestboy = record
+    
+    highestgirl = ("", ',', 0)
+    for name in txnames:
+        record = name.strip().rpartition(',')
+        if record[0][3] == 'F' and int(record[2]) > int(highestgirl[2]):
+            highestgirl = record
 
     return
 
