@@ -3,6 +3,12 @@
 # ASSIGNMENT: Homework #00
 # ALGORITHM: How the program works.  This should be structured using short, descriptive phrases that are indented appropriately.
 
+def word_score(word, points):
+    score = 0
+    for letter in word:
+        score += points[letter]
+    return score
+
 def main():
     with open("CROSSWD.txt", 'r') as file:
         word_list = file.readlines()
@@ -13,19 +19,29 @@ def main():
 
     scrabble_rack = input("Enter the letters in your Scrablle rack: ")
 
+    while True:
+        if len(scrabble_rack) == 7:
+            scrabble_rack = scrabble_rack.lower()
+            break
+        else:
+            scrabble_rack = input("Enter 7 letters: ")
+
+    valid_words = []
     for word in word_list:
         for letter in word.strip():
-            if letter in scrabble_rack:
+            if letter in scrabble_rack and word.count(letter) <= scrabble_rack.count(letter):
                 pass
             else:
                 break
         else:
-            print(word)
+            valid_words.append([word_score(word.strip(), scores), word.strip()])
+
+    valid_words = sorted(valid_words)
+                               
+    for word in reversed(valid_words):
+        print(word[0], word[1])
 
     return
 
 if __name__ == "__main__":
     main()
-
-
-# lets try using str.count(sub[,start][,end])
