@@ -6,9 +6,10 @@
 import os
 
 def readfiles(filenames):
-    for f in filenames:
-        for line in open(os.path.join("C:/TestData/", f)):
-            yield line
+    for ls in filenames:
+        for file in ls:
+            for line in open(os.path.join("C:/TestData/", file)):
+                yield line
 
 def grep(pattern, lines):
     return (line for line in lines if pattern in line)
