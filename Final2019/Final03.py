@@ -3,26 +3,25 @@
 # ASSIGNMENT: Homework #00
 # ALGORITHM: How the program works.  This should be structured using short, descriptive phrases that are indented appropriately.
 
-import re
+import re, collections
 
 def main():
     with open("C:\\TestData\\HarryPotterAndTheSorcerersStone.txt", 'r') as infile:
-        text = infile.read()
+        text = infile.readlines()
 
-    text = text.lower()
-    words = []
+    sentences = []
     for line in text:
-        for word in line.split():
+        sentences.append(line.lower().strip())
+
+    words = []
+    for sentence in sentences:
+        for word in sentence.split():
             words.append(re.sub(r"[^\w\d\s]+", '', word))
+    words = sorted(words)
 
-    word_keys = set(words)
-    word_keys = sorted(word_keys)
-    word_freqs = {}
-    for word in word_keys:
-        word_freqs[word] = words.count(word)
-
+    word_freqs = collections.Counter(words)
     for k, v in word_freqs.items():
-        print(k, " occurs ", v, " times.")
+        print(k, "\toccurs\t", v, "\ttimes.")
 
     return
 
