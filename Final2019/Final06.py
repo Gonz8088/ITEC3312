@@ -12,9 +12,10 @@ def main():
             jobs.append(row)
 
     for row in jobs:
-        if row[4].lstrip('$').isdigit() and ("web" in row[3] or "network" in row[3] \
-        or "database" in row[3] or "computer" in row[3] or "software" in row[3]):
-            print(print(row[2], row[4]))
+        if row[4].lstrip('$ ').replace(',', '').isdigit() and "web" in row[3].casefold() \
+        or "network" in row[3].casefold() or "database" in row[3].casefold() \
+        or "computer" in row[3].casefold() or "software" in row[3].casefold():
+            print(row[3], row[4])
 
     return
 
