@@ -12,13 +12,13 @@ class Time:
         self.__second = second
 
     def getHour(self):
-        return self.__hour
+        return str(self.__hour)
 
     def getMinute(self):
-        return self.__minute
+        return str(self.__minute)
 
     def getSecond(self):
-        return self.__second
+        return str(self.__second)
 
     def setTime(self, startTime, elapseTime):
         newTime = startTime + elapseTime
@@ -36,7 +36,7 @@ class Time:
 def main():
     t = datetime.now()
     time = Time(t.hour, t.minute, t.second)
-    print("Current time is {0}:{1}:{2}".format(str(t.hour), str(t.minute), str(t.second)))
+    print("Current time is {0}:{1}:{2}".format(time.getHour(), time.getMinute(), time.getSecond()))
     s = int(input("Enter the elapsed time: "))
     td = timedelta(seconds=s)
     time.setTime(t, td)
