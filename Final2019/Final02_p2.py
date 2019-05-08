@@ -4,7 +4,7 @@
 # ALGORITHM: How the program works.  This should be structured using short, descriptive phrases that are indented appropriately.
 
 def main():
-    with open("crypt.txt", 'r') as infile:
+    with open("C://TestData//crypt.txt", 'r') as infile:
         print(infile.read())
     return
 

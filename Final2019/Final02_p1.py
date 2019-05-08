@@ -21,10 +21,10 @@ def main():
             "'":'"','"':"'",'+':'-','-':'+','=':';',';':'=',\
             '{':'[','[':'{','}':']',']':'}'}
 
-    with open("text.txt", 'r') as infile:
+    with open("C://TestData//text.txt", 'r') as infile:
         text = infile.read()
 
-    with open("crypt.txt", 'w') as outfile:
+    with open("C://TestData//crypt.txt", 'w') as outfile:
         for ch in text:
             if ch in CODE.keys():
                 outfile.write(CODE[ch])
